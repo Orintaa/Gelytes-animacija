@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: flex-end;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: #8ac7da;
+}
+
+.flower {
+  position: relative;
+  bottom: 0%;
+  left: 50%;
+  background-color: #4b9b4b;
+  height: 25vh;
+  width: 0.5vw;
+}
+.flower::after {
+  content: "";
+  position: absolute;
+  background: #c72fba;
+  left: -4.5vh;
+  top: -5vh;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  -webkit-animation: pulse 3s ease-in-out alternate infinite;
+          animation: pulse 3s ease-in-out alternate infinite;
+}
+.flower::before {
+  content: "";
+  position: absolute;
+  background: #4b9b4b;
+  top: 10vh;
+  left: 0.5vw;
+  width: 10vh;
+  height: 5vh;
+  border-radius: 50% 0 50% 0;
+  transform: rotate(10deg);
+}
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(130%);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(130%);
+  }
+}
+
+.sun {
+  position: absolute;
+  background: yellow;
+  left: 15vw;
+  width: 15vh;
+  height: 15vh;
+  border-radius: 50%;
+  box-shadow: 0 0 50px #fffb00;
+  top: 10vh;
+  -webkit-animation: run 5s ease alternate;
+          animation: run 5s ease alternate;
+}
+
+@-webkit-keyframes run {
+  0% {
+    left: -15vw;
+  }
+  100% {
+    left: 15vw;
+  }
+}
+
+@keyframes run {
+  0% {
+    left: -15vw;
+  }
+  100% {
+    left: 15vw;
+  }
+}
+h1 {
+  position: absolute;
+  font-size: 5rem;
+  top: 20vh;
+  left: 40vw;
+  transform: translate(-50%, -50%);
+  color: #631fb1;
+  -webkit-animation: appear 2s ease-in-out alternate infinite;
+          animation: appear 2s ease-in-out alternate infinite;
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(120%);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(120%);
+  }
+}/*# sourceMappingURL=style.css.map */
